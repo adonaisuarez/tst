@@ -12,8 +12,6 @@ The RDS environment we are implementing in this repo is mainly composed of Virtu
 
 **Backups**
 
-[https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
-
 In Azure Resources Manager, we can use Recovery Services vault to backup all our Virtual Machines. To activate the creation of backups we must enter on the Azure Portal and select the target VM.
 
 On backup tab, we create a Recovery Services vault as can you see in the image bellow.
@@ -38,8 +36,6 @@ The most important parts of this section are:
 
 **Domain Controllers**
 
-[https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms#restoring-domain-controller-vms](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms#restoring-domain-controller-vms)
-
 The recovery of Active Directory Domain Controllers on Virtual Machines is a supported scenario in Azure Backup. Active Directory Restore Mode (necessary for some cases) is also available in Azure, so, all the Active Directory recovery scenarios are viable.
 
 However, is necessary to be aware of some considerations depending of the type of structure of the Domain: one Domain on one Domain Controller, one Domain on some Domain Contollers, or some Domains in a forest.
@@ -55,8 +51,6 @@ If we are trying to recovery a DC which is the last in the forest, is recommenda
 If we are trying to recovery a DC which is not the last in the forest, we can restore it as any VM.
 
 **SQL Database**
-
-[https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
 
 **Backups**
 
@@ -77,3 +71,9 @@ Well, in this window you can select the restore point that you want use to recov
 ![](backups-4.png)
 
 And it is all. Wait few minutes and your database status will be restored.
+
+# Links
+
+[Generic strategy VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
+[Domain Controllers in VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms#restoring-domain-controller-vms)
+[SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
