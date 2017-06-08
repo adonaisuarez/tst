@@ -24,6 +24,8 @@ Is necessary to define a backup policy, selecting a schedule and frequency, and 
 
 When we create and activate the backups, we can see all the information of this service on the Recovery Services Vault section in Azure Portal as you can see in the image bellow.
 
+![](backups-2.png)
+
 The most important parts of this section are:
 
 - Jobs: Here we can check the history that will be generated when the backups task are executed.
@@ -68,6 +70,10 @@ Now, let see how to use one of the automatically created restore points to resto
 
 In Azure Portal, select your database and go to the Overview tab. In the top menu, you can see a &quot;Restore&quot; button. Click on it.
 
+![](backups-3.png)
+
 Well, in this window you can select the restore point that you want use to recover your database status.
+
+![](backups-4.png)
 
 And it is all. Wait few minutes and your database status will be restored.
