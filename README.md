@@ -18,6 +18,8 @@ In Azure Resources Manager, we can use Recovery Services vault to backup all our
 
 On backup tab, we create a Recovery Services vault as can you see in the image bellow.
 
+![](backups-1.png)
+
 Is necessary to define a backup policy, selecting a schedule and frequency, and the retention of the data. There is a default retention period, but we can enlarge this period if we want. It has an impact on the costs.
 
 When we create and activate the backups, we can see all the information of this service on the Recovery Services Vault section in Azure Portal as you can see in the image bellow.
