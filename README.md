@@ -1,4 +1,4 @@
-**Backup and Recovery Strategy**
+# Backup and Recovery Strategy
 
 When our RDS environment is deployed is recommendable to define a strategy for backup and recovery to be ready for a possible data loss.
 
@@ -6,7 +6,7 @@ In this type of environments, with a complex architecture, is necessary to consi
 
 In this short guide, we will take a quick look of the generic backup and recovery strategy for Azure VMs, and then, we will see in detail the considerations that we must consider for some of the elements of the architecture.
 
-**Generic strategy for Backup and Recovery of Virtual Machines**
+## Generic strategy for Backup and Recovery of Virtual Machines
 
 The RDS environment we are implementing in this repo is mainly composed of Virtual Machines (VM) with assigned RDS roles. So, to define a strategy for backup and restore generic VMs is essential.
 
@@ -34,7 +34,7 @@ The most important parts of this section are:
 
 [https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms)
 
-**Domain Controllers**
+## Revovery of Domain Controllers
 
 The recovery of Active Directory Domain Controllers on Virtual Machines is a supported scenario in Azure Backup. Active Directory Restore Mode (necessary for some cases) is also available in Azure, so, all the Active Directory recovery scenarios are viable.
 
@@ -50,7 +50,7 @@ If we are trying to recovery a DC which is the last in the forest, is recommenda
 
 If we are trying to recovery a DC which is not the last in the forest, we can restore it as any VM.
 
-**SQL Database**
+## SQL Database
 
 **Backups**
 
