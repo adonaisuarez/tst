@@ -74,6 +74,6 @@ And it is all. Wait few minutes and your database status will be restored.
 
 # Links
 
-[Generic strategy VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
-[Domain Controllers in VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms#restoring-domain-controller-vms)
-[SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
+* [Generic strategy VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
+* [Domain Controllers in VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms#restoring-domain-controller-vms)
+* [SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
