@@ -10,7 +10,7 @@ In this short guide, we will take a quick look of the generic backup and recover
 
 The RDS environment we are implementing in this repo is mainly composed of Virtual Machines (VM) with assigned RDS roles. So, to define a strategy for backup and restore generic VMs is essential.
 
-**Backups**
+### Backups
 
 In Azure Resources Manager, we can use Recovery Services vault to backup all our Virtual Machines. To activate the creation of backups we must enter on the Azure Portal and select the target VM.
 
@@ -30,7 +30,7 @@ The most important parts of this section are:
 - Alerts and Events: Here are the notifications of the service. Is a nice place to be informed of the services status and backups task issues.
 - Backups Items: Here we can check the VMs includes in this vault and access individually to each of them.
 
-**Recovery**
+### Recovery
 
 In the previous section, we saw how to configure the backups policies for our virtual machines. Now, we are going to see how to use these backups to restore one of them.
 In the same tab of backups of the target VM we can see that after the firsts completed backups tasks, the button “Restore VM” is now active. To restore the VM, click on it.
@@ -43,12 +43,14 @@ After click the button, we can see the available restore points. Select one of t
 
 Now, we can do two things: restore just the disk of the machine or create a new virtual machine form the backup.
 
-***Restore disk***
+** Restore disk ** 
+
 In this option, you only must select a storage account where the disks will be stored.
 
 ![](backups-7.png)
  
-***Create virtual machine ***
+** Create virtual machine **
+
 We must select a new name for the VM, a Virtual Network, Subnet and Storage Account. Also, you can select a different Resource Group of the original if you want to restore this VM isolated.
 
 ![](backups-8.png)
@@ -71,13 +73,13 @@ If we are trying to recovery a DC which is not the last in the forest, we can re
 
 ## SQL Database
 
-**Backups**
+### Backups
 
 Azure SQL Database Service automatically creates a database backups and at no additional charge.
 
 Depending of the tier of the database the retention period is from 7 days to 35 days. It is possible to enlarge this period configuring the long-term retention policy. In this case, there is an additional cost associated.
 
-**Restore**
+### Restore
 
 Now, let see how to use one of the automatically created restore points to restore a SQL Database.
 
