@@ -32,7 +32,26 @@ The most important parts of this section are:
 
 **Recovery**
 
-[https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms)
+In the previous section, we saw how to configure the backups policies for our virtual machines. Now, we are going to see how to use these backups to restore one of them.
+In the same tab of backups of the target VM we can see that after the firsts completed backups tasks, the button “Restore VM” is now active. To restore the VM, click on it.
+
+![](backups-5.png)
+
+After click the button, we can see the available restore points. Select one of them and continue.
+
+![](backups-6.png)
+
+Now, we can do two things: restore just the disk of the machine or create a new virtual machine form the backup.
+
+***Restore disk***
+In this option, you only must select a storage account where the disks will be stored.
+
+![](backups-7.png)
+ 
+***Create virtual machine ***
+We must select a new name for the VM, a Virtual Network, Subnet and Storage Account. Also, you can select a different Resource Group of the original if you want to restore this VM isolated.
+
+![](backups-8.png)
 
 ## Revovery of Domain Controllers
 
@@ -75,7 +94,7 @@ And it is all. Wait few minutes and your database status will be restored.
 ## Restore VMs with special network configuration
 
 In this scenario, we have some special network configuration for some VMs, e.g., RDFE-VM01 and RDFE-VM02 are behind a Load Balancer. 
-In this case, if we need to restore a one of these VMs, we must use Powershell to create them from the disks restored. You can know how do that here: https://docs.microsoft.com/es-es/azure/virtual-machines/windows/quick-create-powershell
+In this case, if we need to restore a one of these VMs, we must use Powershell to create them from the disks restored. You can know how do that [here](https://docs.microsoft.com/es-es/azure/virtual-machines/windows/quick-create-powershell).
 After restore a VM, we must do some steps:
 * **Static IP**: Some VMs in our RDS environment have static IPs. When a VMs is restored, the static IP is reset to a dynamic one to avoid conflicts. We must change it manually after restore.
 * **Availability sets**: For load balancing, some VMs are in an availability set. In this case, how we said before, is recommended do a disk restore and then then add the availability set when create the VM via Powershell.
