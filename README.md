@@ -72,6 +72,14 @@ Well, in this window you can select the restore point that you want use to recov
 
 And it is all. Wait few minutes and your database status will be restored.
 
+## Restore VMs with special network configuration
+
+In this scenario, we have some special network configuration for some VMs, e.g., RDFE-VM01 and RDFE-VM02 are behind a Load Balancer. 
+In this case, if we need to restore a one of these VMs, we must use Powershell to create them from the disks restored. You can know how do that here: https://docs.microsoft.com/es-es/azure/virtual-machines/windows/quick-create-powershell
+After restore a VM, we must do some steps:
+* **Static IP**: Some VMs in our RDS environment have static IPs. When a VMs is restored, the static IP is reset to a dynamic one to avoid conflicts. We must change it manually after restore.
+* **Availability sets**: For load balancing, some VMs are in an availability set. In this case, how we said before, is recommended do a disk restore and then then add the availability set when create the VM via Powershell.
+
 # Links
 
 * [Generic strategy VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
