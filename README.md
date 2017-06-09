@@ -43,13 +43,13 @@ After click the button, we can see the available restore points. Select one of t
 
 Now, we can do two things: restore just the disk of the machine or create a new virtual machine form the backup.
 
-** Restore disk ** 
+**Restore disk** 
 
 In this option, you only must select a storage account where the disks will be stored.
 
 ![](backups-7.png)
  
-** Create virtual machine **
+**Create virtual machine**
 
 We must select a new name for the VM, a Virtual Network, Subnet and Storage Account. Also, you can select a different Resource Group of the original if you want to restore this VM isolated.
 
