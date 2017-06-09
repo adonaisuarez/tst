@@ -103,6 +103,8 @@ After restore a VM, we must do some steps:
 
 # Links
 
-* [Generic strategy VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
+* [Generic backup VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
+* [Generic restore VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms)
 * [Domain Controllers in VMs](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms#restoring-domain-controller-vms)
 * [SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
+
